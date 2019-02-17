@@ -50,41 +50,31 @@ namespace Template
             }
         }
 
-        class Banco
+        class Agencia
         {
-            private Cliente cliente1, cliente2, cliente3;
+            private Cliente cliente1, cliente2, cliente3;//Funciones sin delimitar
 
-            public Banco()
+            public Agencia()
             {
+                //Funciones sin delimitar
                 cliente1 = new Cliente("Yhonas");
                 cliente2 = new Cliente("Ana");
                 cliente3 = new Cliente("Pedro");
             }
 
-            public void Operar()
+            public void Comprar()
             {
-                cliente1.Depositar(100);
-                cliente2.Depositar(150);
-                cliente3.Depositar(200);
-                cliente3.Extraer(150);
+                //Funciones sin delimitar
             }
 
-            public void DepositosTotales()
+            public void Eliminar()
             {
-                int t = cliente1.RetornarMonto() +
-                        cliente2.RetornarMonto() +
-                        cliente3.RetornarMonto();
-                Console.WriteLine("El total de dinero en el banco es:" + t);
-                cliente1.Imprimir();
-                cliente2.Imprimir();
-                cliente3.Imprimir();
+                //Funciones sin delimitar
             }
 
             static void Main(string[] args)
             {
-                Banco banco1 = new Banco();
-                banco1.Operar();
-                banco1.DepositosTotales();
+                //Funciones sin delimitar
                 Console.ReadKey();
             }
         }
