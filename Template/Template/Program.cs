@@ -10,33 +10,43 @@ namespace Template
     {
         class Cliente
         {
+            //Estas seran las caracteristicas del cliente, todos los datos generales
             private string nombre;
-            private int monto;
+            private string pedido1; //Los clientes tienen un limite de dos pedidos
+            private string pedido2;
+            private int costo; //Costo por ambos pedidos
 
-            public Cliente(string nom)
+            public Cliente(string nom) //Se almacenan los datos de los clientes
             {
                 nombre = nom;
-                monto = 0;
+                pedido1 = "";
+                pedido2 = "";
+                costo = 0;
             }
 
-            public void Depositar(int m)
+            public void Orden1(string ord) //Se almacenan en un String el vehiculo que el cliente pidio
             {
-                monto = monto + m;
+                 pedido1 = ord;
             }
 
-            public void Extraer(int m)
+            public void Orden2(string ord) //Se almacenan en un String el vehiculo que el cliente pidio
             {
-                monto = monto - m;
+                pedido2 = ord;
             }
 
-            public int RetornarMonto()
+            public void Pagar(int m) //Aqui se almacena el costo total del pedido
             {
-                return monto;
+                costo = costo + m;
             }
 
-            public void Imprimir()
+            public void Eliminar(int m) //Si se hace un cambio, este proceso elimina el pedido
             {
-                Console.WriteLine(nombre + " tiene depositado la suma de " + monto);
+                costo = costo - m;
+            }
+
+            public void Imprimir() //Aqui se imprimen todos los datos del cliente
+            {
+                Console.WriteLine($"{nombre} ha pedido:\n{pedido1}\n{pedido2}\nLo que costara: {costo}");
             }
         }
 
