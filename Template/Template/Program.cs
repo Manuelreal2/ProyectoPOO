@@ -26,7 +26,7 @@ namespace Template
 
             public void Orden1(string ord) //Se almacenan en un String el vehiculo que el cliente pidio
             {
-                 pedido1 = ord;
+                pedido1 = ord;
             }
 
             public void Orden2(string ord) //Se almacenan en un String el vehiculo que el cliente pidio
