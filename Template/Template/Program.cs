@@ -65,6 +65,7 @@ namespace Template
             public void Comprar()
             {
                 //Funciones sin delimitar
+
             }
 
             public void Eliminar()
@@ -90,14 +91,20 @@ namespace Template
                 } while (opcion !=4);
                 if (opcion==1)
                     {
-                        Console.WriteLine(Cliente);
+                        
                     }
                 else if (opcion==2)
                     {
                         
                     }
                 else if (opcion==3)
-                    {}
+                    {
+                        
+                    }
+                else if(opcion==4)
+                    {
+                        
+                    }
                 Console.ReadKey();
             }
         }
