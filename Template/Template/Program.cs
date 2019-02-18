@@ -75,6 +75,7 @@ namespace Template
             static void Main(string[] args)
             {
                 //Funciones sin delimitar
+                Console.WriteLine("Achichincles");
                 Console.ReadKey();
             }
         }
