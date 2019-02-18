@@ -62,6 +62,10 @@ namespace Template
                 modelo = this.modelo;
                 costo = this.costo;
             }
+            public void imprimir()
+                {
+                    Console.WriteLine(marca+", "+modelo+", "+", "+tipo+", "+costo);
+                }
         }
 
         class Agencia
