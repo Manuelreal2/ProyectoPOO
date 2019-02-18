@@ -64,7 +64,7 @@ namespace Template
             }
             public void imprimir()
                 {
-                    Console.WriteLine(marca+", "+modelo+", "+", "+tipo+", "+costo);
+                    Console.WriteLine($"{marca}, {modelo}, {tipo}, {costo}");
                 }
         }
 
