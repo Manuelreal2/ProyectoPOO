@@ -74,8 +74,17 @@ namespace Template
 
             static void Main(string[] args)
             {
+                int opcion;
                 //Funciones sin delimitar
-                Console.WriteLine("Achichincles");
+                do {
+                    Console.WriteLine("---------------MENU------------------");
+                    Console.WriteLine("-        1. Checar Cliente          -");
+                    Console.WriteLine("-       2. Eliminar Factura         -");
+                    Console.WriteLine("-       3. Comprar Vehiculo         -");
+                    Console.WriteLine("-             4. Salir              -");
+                    Console.WriteLine("-------------------------------------");
+                    opcion = int.Parse(Console.ReadLine());
+                } while (opcion !=4);
                 Console.ReadKey();
             }
         }
