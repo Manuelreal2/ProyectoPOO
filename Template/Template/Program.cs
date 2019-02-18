@@ -49,10 +49,25 @@ namespace Template
                 Console.WriteLine($"{nombre} ha pedido:\n{pedido1}\n{pedido2}\nLo que costara: {costo}");
             }
         }
+        class Vehiculo
+        {
+            private String tipos;
+            private String marcas;
+            private String modelo;
+            private int costo;
+            public Vehiculo(String tipo, String marca, String modelo, int costo)
+            {
+                tipos = tipo;
+                marcas = marca;
+                modelo = this.modelo;
+                costo = this.costo;
+            }
+        }
 
         class Agencia
         {
             private Cliente cliente1, cliente2, cliente3;//Funciones sin delimitar
+            private Vehiculo carro1, carro2, camion1, camion2, moto1, moto2;
 
             public Agencia()
             {
@@ -60,21 +75,47 @@ namespace Template
                 cliente1 = new Cliente("Yhonas");
                 cliente2 = new Cliente("Ana");
                 cliente3 = new Cliente("Pedro");
+                carro1 = new Vehiculo("Carro","Mercedes-Benz","Maybach S 650",4040000);
+                carro2 = new Vehiculo("Carro","Mercedes-Benz","C 300 Convertible",1010000);
             }
-
+            
             public void Comprar()
             {
                 //Funciones sin delimitar
             }
-
+            
             public void Eliminar()
             {
                 //Funciones sin delimitar
+                Console.Clear();
+                Console.WriteLine("Pulse una tecla para salir");
+                Console.ReadKey();
             }
 
             static void Main(string[] args)
             {
+                int opcion;
                 //Funciones sin delimitar
+                do {
+                    Console.WriteLine("---------------MENU------------------");
+                    Console.WriteLine("-        1. Checar Cliente          -");
+                    Console.WriteLine("- 2. Verificar Carros en la Agencia -");
+                    Console.WriteLine("-       3. Eliminar Factura         -");
+                    Console.WriteLine("-       4. Comprar Vehiculo         -");
+                    Console.WriteLine("-             5. Salir              -");
+                    Console.WriteLine("-------------------------------------");
+                    opcion = int.Parse(Console.ReadLine());
+                } while (opcion !=4);
+                if (opcion==1)
+                    {
+                        Console.WriteLine(Cliente);
+                    }
+                else if (opcion==2)
+                    {
+                        
+                    }
+                else if (opcion==3)
+                    {}
                 Console.ReadKey();
             }
         }
