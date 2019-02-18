@@ -64,7 +64,7 @@ namespace Template
             }
             public void imprimir()
                 {
-                    Console.WriteLine($"{marca}, {modelo}, {tipo}, {costo}");
+                    Console.WriteLine($"{marcas}, {modelo}, {tipos}, {costo}");
                 }
         }
 
@@ -114,23 +114,21 @@ namespace Template
                     Console.WriteLine("-             5. Salir              -");
                     Console.WriteLine("-------------------------------------");
                     opcion = int.Parse(Console.ReadLine());
+                    switch (opcion)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            Console.WriteLine("Hasta la vista BABY");
+                            break;
+                    }
                 } while (opcion <5);
-                if (opcion==1)
-                    {
-                        
-                    }
-                else if (opcion==2)
-                    {
-                        
-                    }
-                else if (opcion==3)
-                    {
-                        
-                    }
-                else if(opcion==4)
-                    {
-                        
-                    }
                 Console.ReadKey();
             }
         }
