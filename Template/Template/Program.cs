@@ -114,7 +114,7 @@ namespace Template
                     Console.WriteLine("-             5. Salir              -");
                     Console.WriteLine("-------------------------------------");
                     opcion = int.Parse(Console.ReadLine());
-                } while (opcion !=4);
+                } while (opcion <5);
                 if (opcion==1)
                     {
                         
