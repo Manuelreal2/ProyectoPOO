@@ -88,6 +88,16 @@ namespace Template
                     Console.WriteLine("-------------------------------------");
                     opcion = int.Parse(Console.ReadLine());
                 } while (opcion !=4);
+                if (opcion==1)
+                    {
+                        Console.WriteLine(Cliente);
+                    }
+                else if (opcion==2)
+                    {
+                        
+                    }
+                else if (opcion==3)
+                    {}
                 Console.ReadKey();
             }
         }
