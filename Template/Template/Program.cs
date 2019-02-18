@@ -62,9 +62,13 @@ namespace Template
                 modelo = this.modelo;
                 costo = this.costo;
             }
-            public void imprimir()
+            public void imprimircompra()
                 {
-                    Console.WriteLine(marca+", "+modelo+", "+", "+tipo+", "+costo);
+                    Console.WriteLine(marcas+", "+modelo+", "+", "+tipos+", "+costo);
+                }
+            public void imprlistado()
+                {
+                    Console.WriteLine(tipos+"\n"+marcas+"\n"+modelo+"\n"+costo);
                 }
         }
 
