@@ -70,6 +70,9 @@ namespace Template
             public void Eliminar()
             {
                 //Funciones sin delimitar
+                Console.Clear();
+                Console.WriteLine("Pulse una tecla para salir");
+                Console.ReadKey();
             }
 
             static void Main(string[] args)
