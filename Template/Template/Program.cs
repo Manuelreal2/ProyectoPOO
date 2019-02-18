@@ -26,7 +26,7 @@ namespace Template
 
             public void Orden1(string ord) //Se almacenan en un String el vehiculo que el cliente pidio
             {
-                 pedido1 = ord;
+                pedido1 = ord;
             }
 
             public void Orden2(string ord) //Se almacenan en un String el vehiculo que el cliente pidio
@@ -81,6 +81,10 @@ namespace Template
                 cliente3 = new Cliente("Pedro");
                 carro1 = new Vehiculo("Carro","Mercedes-Benz","Maybach S 650",4040000);
                 carro2 = new Vehiculo("Carro","Mercedes-Benz","C 300 Convertible",1010000);
+                moto1 = new Vehiculo("moto","Kawasaki ","Ninja 650ex",49000);
+                moto2 = new Vehiculo("moto","Italika","DM150", 24999);
+                camion1 = new Vehiculo("camion","Mercedes-Benz", "Actros 1841 LS 4X2", 280913);
+                camion2 = new Vehiculo("camion","International","Prostar 2010", 759000);
             }
             
             public void Comprar()
