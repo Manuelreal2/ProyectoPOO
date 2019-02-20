@@ -55,16 +55,18 @@ namespace Template
             private String marcas;
             private String modelo;
             private int costo;
+
             public Vehiculo(String tipo, String marca, String modelo, int costo)
             {
                 tipos = tipo;
                 marcas = marca;
-                modelo = this.modelo;
-                costo = this.costo;
+                this.modelo = modelo;
+                this.costo = costo;
             }
-            public void imprimir()
+
+            public void Imprimir()
                 {
-                    Console.WriteLine($"{marcas}, {modelo}, {tipos}, {costo}");
+                    Console.WriteLine($"\nTipo: {tipos} \nMarca: {marcas}\nModelo: {modelo}\nCosto: ${costo}");
                 }
         }
 
@@ -75,22 +77,26 @@ namespace Template
 
             public Agencia()
             {
-                //Funciones sin delimitar
                 cliente1 = new Cliente("Yhonas");
                 cliente2 = new Cliente("Ana");
                 cliente3 = new Cliente("Pedro");
                 carro1 = new Vehiculo("Carro","Mercedes-Benz","Maybach S 650",4040000);
                 carro2 = new Vehiculo("Carro","Mercedes-Benz","C 300 Convertible",1010000);
-                moto1 = new Vehiculo("moto","Kawasaki ","Ninja 650ex",49000);
-                moto2 = new Vehiculo("moto","Italika","DM150", 24999);
-                camion1 = new Vehiculo("camion","Mercedes-Benz", "Actros 1841 LS 4X2", 280913);
-                camion2 = new Vehiculo("camion","International","Prostar 2010", 759000);
+                moto1 = new Vehiculo("Moto","Kawasaki ","Ninja 650ex",49000);
+                moto2 = new Vehiculo("Moto","Italika","DM150", 24999);
+                camion1 = new Vehiculo("Camion","Mercedes-Benz", "Actros 1841 LS 4X2", 280913);
+                camion2 = new Vehiculo("Camion","International","Prostar 2010", 759000);
+                
             }
             
-            public void Comprar()
+            public void Lista()
             {
-                //Funciones sin delimitar
-
+                carro1.Imprimir();
+                carro2.Imprimir();
+                moto1.Imprimir();
+                moto2.Imprimir();
+                camion1.Imprimir();
+                camion2.Imprimir();
             }
             
             public void Eliminar()
@@ -103,32 +109,32 @@ namespace Template
 
             static void Main(string[] args)
             {
+                Console.WriteLine("---------------MENU------------------");
+                Console.WriteLine("-        1. Checar Cliente          -");
+                Console.WriteLine("- 2. Verificar Carros en la Agencia -");
+                Console.WriteLine("-       3. Comprar Vehiculo         -");
+                Console.WriteLine("-       4. Eliminar Factura         -");
+                Console.WriteLine("-             5. Salir              -");
+                Console.WriteLine("-------------------------------------");
                 int opcion;
-                //Funciones sin delimitar
-                do {
-                    Console.WriteLine("---------------MENU------------------");
-                    Console.WriteLine("-        1. Checar Cliente          -");
-                    Console.WriteLine("- 2. Verificar Carros en la Agencia -");
-                    Console.WriteLine("-       3. Eliminar Factura         -");
-                    Console.WriteLine("-       4. Comprar Vehiculo         -");
-                    Console.WriteLine("-             5. Salir              -");
-                    Console.WriteLine("-------------------------------------");
-                    opcion = int.Parse(Console.ReadLine());
-                    switch (opcion)
-                    {
-                        case 1:
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            Console.WriteLine("Hasta la vista BABY");
-                            break;
-                    }
-                } while (opcion <5);
+                opcion = int.Parse(Console.ReadLine());
+                switch (opcion)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Agencia c = new Agencia();
+                        c.Lista();
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        Console.WriteLine("Hasta la vista BABY");
+                        break;
+                }
                 Console.ReadKey();
             }
         }
